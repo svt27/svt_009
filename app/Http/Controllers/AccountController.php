@@ -176,4 +176,35 @@ class AccountController extends Controller
 
         return redirect()->route('accounts.index');
     }
+
+
+    public function getTransferForm()
+    {
+        $accounts = auth()->user()->accounts;
+
+        $to_accounts = Account::where('account_number', '!=' , '000000000000')->get();
+        return view('accounts.transfer', compact('accounts', 'to_accounts'));
+    }
+
+    public function storeTransfer(Request $request)
+    {
+        $fields = $request->all();
+
+        $dest_account = Account::find($fields['dest_id']);
+        $account_b = Account::find($fields['source_id']);
+
+        if ($fields['amount'] > $account_b->balance) {
+            flash()->error("Sorry Transaction cannot be done! No enough balance");
+            return back();
+        }
+
+        $this->makeTransaction($account_b, $dest_account, $fields['amount'], 'deposit');
+
+
+        flash()->success('Transfer done successfully');
+
+        return redirect()->route('accounts.index');
+    }
+
+
 }

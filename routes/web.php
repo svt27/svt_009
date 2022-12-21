@@ -44,6 +44,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('withdraws', 'App\Http\Controllers\AccountController@getWithdrawForm')->name('withdraw.show');
     Route::post('withdraws', 'App\Http\Controllers\AccountController@storeWithdraw')->name('withdraw.store');
 
+    Route::get('transfers', 'App\Http\Controllers\AccountController@getTransferForm')->name('transfer.show');
+    Route::post('transfers', 'App\Http\Controllers\AccountController@storeTransfer')->name('transfer.store');
+
 });
 
 

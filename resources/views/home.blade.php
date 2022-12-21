@@ -42,19 +42,19 @@
                             </a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('transfer.show') }}">
+                                <span data-feather="file-text"></span>
+                                Transfer
+                            </a>
+                        </li>
+
 {{--                        <li class="nav-item">--}}
 {{--                            <a class="nav-link" href="#">--}}
 {{--                                <span data-feather="file-text"></span>--}}
-{{--                                Transfer--}}
+{{--                                Profile--}}
 {{--                            </a>--}}
 {{--                        </li>--}}
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Profile
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </nav>
