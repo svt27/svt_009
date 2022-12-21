@@ -17,7 +17,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('accounts.index') }}">
                                 <span data-feather="file"></span>
-                                My Accounts
+                                    My Accounts
                             </a>
                         </li>
                     </ul>
@@ -30,24 +30,24 @@
                     </h6>
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('users')}}">
+                            <a class="nav-link" href="{{route('deposit.show')}}">
                                 <span data-feather="file-text"></span>
                                 Deposit
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('withdraw.show') }}">
                                 <span data-feather="file-text"></span>
                                 Withdraw
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file-text"></span>
-                                Transfer
-                            </a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="#">--}}
+{{--                                <span data-feather="file-text"></span>--}}
+{{--                                Transfer--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
 
                         <li class="nav-item">
                             <a class="nav-link" href="#">
