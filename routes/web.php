@@ -37,6 +37,8 @@ Route::middleware(['auth'])->group(function () {
 
     })->name('profile-update');
 
+    Route::resource('accounts', 'App\Http\Controllers\AccountController');
+
 });
 
 
