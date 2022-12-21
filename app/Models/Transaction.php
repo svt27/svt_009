@@ -17,4 +17,14 @@ class Transaction extends Model
         'memo',
         'expected_total',
     ];
+
+    public function source()
+    {
+        return $this->belongsTo(Account::class, 'account_src');
+    }
+
+    public function dest()
+    {
+        return $this->belongsTo(Account::class, 'account_dest');
+    }
 }

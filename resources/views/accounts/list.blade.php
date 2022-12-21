@@ -18,7 +18,7 @@
                 <tbody>
                     @foreach($accounts as $account)
                         <tr>
-                            <th scope="row">{{ $account->account_number }}</th>
+                            <th scope="row"><a href="{{ route('accounts.show', $account->id) }}">{{ $account->account_number }}</a></th>
                             <td>{{ $account->balance }}</td>
                             <td>{{ $account->account_type }}</td>
                             <td>{{ $account->updated_at }}</td>
