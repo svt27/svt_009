@@ -17,6 +17,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware(['auth'])->group(function () {
+
+    Route::middleware(['role:super-admin'])->group(function () {
+
+        Route::get('users', function () {
+            return view('users');
+
+        })->name('users');
+    });
+
+    Route::get('profile', function () {
+        return view('profile');
+
+    })->name('profile');
+
+    Route::post('profile-update', function () {
+        return view('profile');
+
+    })->name('profile-update');
+
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
