@@ -4,7 +4,7 @@
 @section('content')
 
 
-            <h2>Create List</h2>
+            <h2>Account List</h2>
 
             <table id="dt" class="table">
                 <thead>

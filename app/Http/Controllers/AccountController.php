@@ -52,16 +52,25 @@ class AccountController extends Controller
         $account_src = Account::find($fields['account_src']);
         $account_dest = Account::find($account->id);
 
-        $account_src->balance = $account_src->balance - $fields['deposit'];
+        $this->makeTransaction($account_src, $account_dest, $fields['deposit'], 'deposit');
+
+        flash()->success('Account created successfully');
+
+        return redirect()->route('accounts.index');
+    }
+
+    public function makeTransaction(Account $account_src, Account $account_dest, $amount, $type)
+    {
+        $account_src->balance = $account_src->balance - $amount;
         $account_src->save();
-        $account_dest->balance = $account_dest->balance + $fields['deposit'];
+        $account_dest->balance = $account_dest->balance + $amount;
         $account_dest->save();
 
         Transaction::create([
             'account_src' => $account_src->id,
             'account_dest' => $account_dest->id,
-            'balance_change' => "-".$fields['deposit'],
-            'transaction_type' => 'deposit',
+            'balance_change' => "-".$amount,
+            'transaction_type' => $type,
             'memo' => 'initial deposit',
             'expected_total' => $account_src->balance,
         ]);
@@ -69,15 +78,11 @@ class AccountController extends Controller
         Transaction::create([
             'account_src' => $account_dest->id,
             'account_dest' => $account_src->id,
-            'balance_change' => "+".$fields['deposit'],
-            'transaction_type' => 'deposit',
+            'balance_change' => "+".$amount,
+            'transaction_type' => $type,
             'memo' => 'initial deposit',
             'expected_total' => $account_dest->balance,
         ]);
-
-        flash()->success('Account created successfully');
-
-        return redirect()->route('accounts.index');
     }
 
     /**
@@ -124,4 +129,82 @@ class AccountController extends Controller
     {
         //
     }
+
+    public function getDepositForm()
+    {
+        $accounts = auth()->user()->accounts;
+        return view('accounts.deposit', compact('accounts'));
+    }
+
+    public function storeDeposit(Request $request)
+    {
+        $fields = $request->all();
+
+        $world_account = Account::where('account_number', '000000000000')->first();
+        $account_b = Account::find($fields['source_id']);
+
+        $this->makeTransaction($world_account, $account_b, $fields['amount'], 'deposit');
+
+
+        flash()->success('Deposit done successfully');
+
+        return redirect()->route('accounts.index');
+    }
+
+    public function getWithdrawForm()
+    {
+        $accounts = auth()->user()->accounts;
+        return view('accounts.withdraw', compact('accounts'));
+    }
+
+    public function storeWithdraw(Request $request)
+    {
+        $fields = $request->all();
+
+        $world_account = Account::where('account_number', '000000000000')->first();
+        $account_b = Account::find($fields['source_id']);
+
+        if ($fields['amount'] > $account_b->balance) {
+            flash()->error("Sorry Transaction cannot be done! No enough balance");
+            return back();
+        }
+
+        $this->makeTransaction($account_b, $world_account, $fields['amount'], 'deposit');
+
+
+        flash()->success('Withdraw done successfully');
+
+        return redirect()->route('accounts.index');
+    }
+
+
+    public function getTransferForm()
+    {
+        $accounts = auth()->user()->accounts;
+
+        $to_accounts = Account::where('account_number', '!=' , '000000000000')->get();
+        return view('accounts.transfer', compact('accounts', 'to_accounts'));
+    }
+
+    public function storeTransfer(Request $request)
+    {
+        $fields = $request->all();
+
+        $dest_account = Account::find($fields['dest_id']);
+        $account_b = Account::find($fields['source_id']);
+
+        if ($fields['amount'] > $account_b->balance) {
+            flash()->error("Sorry Transaction cannot be done! No enough balance");
+            return back();
+        }
+
+        $this->makeTransaction($account_b, $dest_account, $fields['amount'], 'deposit');
+
+
+        flash()->success('Transfer done successfully');
+
+        return redirect()->route('accounts.index');
+    }
+
+
 }

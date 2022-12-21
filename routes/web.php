@@ -39,6 +39,14 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('accounts', 'App\Http\Controllers\AccountController');
 
+    Route::get('deposit', 'App\Http\Controllers\AccountController@getDepositForm')->name('deposit.show');
+    Route::post('deposit', 'App\Http\Controllers\AccountController@storeDeposit')->name('deposit.store');
+    Route::get('withdraws', 'App\Http\Controllers\AccountController@getWithdrawForm')->name('withdraw.show');
+    Route::post('withdraws', 'App\Http\Controllers\AccountController@storeWithdraw')->name('withdraw.store');
+
+    Route::get('transfers', 'App\Http\Controllers\AccountController@getTransferForm')->name('transfer.show');
+    Route::post('transfers', 'App\Http\Controllers\AccountController@storeTransfer')->name('transfer.store');
+
 });
 
 
