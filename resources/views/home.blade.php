@@ -15,9 +15,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('accounts.index') }}">
                                 <span data-feather="file"></span>
-                                My Account
+                                My Accounts
                             </a>
                         </li>
                     </ul>
