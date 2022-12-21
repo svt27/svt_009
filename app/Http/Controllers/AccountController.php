@@ -3,39 +3,81 @@
 namespace App\Http\Controllers;
 
 use App\Models\Account;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Psy\Util\Str;
+use function GuzzleHttp\Promise\all;
 
 class AccountController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
-        //
+        $accounts = auth()->user()->accounts;
+        return view('accounts.list', compact('accounts'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function create()
     {
-        //
+        $accounts = Account::where('account_type', 'world')->get();
+        return view('accounts.create', compact('accounts'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
     public function store(Request $request)
     {
-        //
+        $fields = $request->all();
+
+        $fields['account_number'] = bin2hex(random_bytes(10));
+        $fields['account_type'] = 'personal';
+        $fields['user_id'] = auth()->id();
+
+        $account = Account::create($fields);
+
+        $account_src = Account::find($fields['account_src']);
+        $account_dest = Account::find($account->id);
+
+        $account_src->balance = $account_src->balance - $fields['deposit'];
+        $account_src->save();
+        $account_dest->balance = $account_dest->balance + $fields['deposit'];
+        $account_dest->save();
+
+        Transaction::create([
+            'account_src' => $account_src->id,
+            'account_dest' => $account_dest->id,
+            'balance_change' => "-".$fields['deposit'],
+            'transaction_type' => 'deposit',
+            'memo' => 'initial deposit',
+            'expected_total' => $account_src->balance,
+        ]);
+
+        Transaction::create([
+            'account_src' => $account_dest->id,
+            'account_dest' => $account_src->id,
+            'balance_change' => "+".$fields['deposit'],
+            'transaction_type' => 'deposit',
+            'memo' => 'initial deposit',
+            'expected_total' => $account_dest->balance,
+        ]);
+
+        flash()->success('Account created successfully');
+
+        return redirect()->route('accounts.index');
     }
 
     /**

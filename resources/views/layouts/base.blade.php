@@ -32,7 +32,9 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+{{--    <link href="dashboard.css" rel="stylesheet">--}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+
     @yield('css')
 </head>
 <body>
@@ -86,7 +88,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
         integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
         crossorigin="anonymous"></script>
-<script src="dashboard.js"></script>
+{{--<script src="dashboard.js"></script>--}}
 @yield('js')
 </body>
 </html>
