@@ -52,14 +52,14 @@ class AccountController extends Controller
         $account_src = Account::find($fields['account_src']);
         $account_dest = Account::find($account->id);
 
-        $this->makeTransaction($account_src, $account_dest, $fields['deposit'], 'deposit');
+        $this->makeTransaction($account_src, $account_dest, $fields['deposit'], 'deposit', 'Initial deposit on account opening');
 
         flash()->success('Account created successfully');
 
         return redirect()->route('accounts.index');
     }
 
-    public function makeTransaction(Account $account_src, Account $account_dest, $amount, $type)
+    public function makeTransaction(Account $account_src, Account $account_dest, $amount, $type, $memo)
     {
         $account_src->balance = $account_src->balance - $amount;
         $account_src->save();
@@ -71,7 +71,7 @@ class AccountController extends Controller
             'account_dest' => $account_dest->id,
             'balance_change' => "-".$amount,
             'transaction_type' => $type,
-            'memo' => 'initial deposit',
+            'memo' => $memo,
             'expected_total' => $account_src->balance,
         ]);
 
@@ -80,7 +80,7 @@ class AccountController extends Controller
             'account_dest' => $account_src->id,
             'balance_change' => "+".$amount,
             'transaction_type' => $type,
-            'memo' => 'initial deposit',
+            'memo' => $memo,
             'expected_total' => $account_dest->balance,
         ]);
     }
@@ -143,7 +143,7 @@ class AccountController extends Controller
         $world_account = Account::where('account_number', '000000000000')->first();
         $account_b = Account::find($fields['source_id']);
 
-        $this->makeTransaction($world_account, $account_b, $fields['amount'], 'deposit');
+        $this->makeTransaction($world_account, $account_b, $fields['amount'], 'deposit',$fields['memo']);
 
 
         flash()->success('Deposit done successfully');
@@ -169,7 +169,7 @@ class AccountController extends Controller
             return back();
         }
 
-        $this->makeTransaction($account_b, $world_account, $fields['amount'], 'deposit');
+        $this->makeTransaction($account_b, $world_account, $fields['amount'], 'deposit', $fields['memo']);
 
 
         flash()->success('Withdraw done successfully');
@@ -198,7 +198,7 @@ class AccountController extends Controller
             return back();
         }
 
-        $this->makeTransaction($account_b, $dest_account, $fields['amount'], 'deposit');
+        $this->makeTransaction($account_b, $dest_account, $fields['amount'], 'deposit', $fields['memo']);
 
 
         flash()->success('Transfer done successfully');
