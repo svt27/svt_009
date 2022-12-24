@@ -37,6 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::put('profile-update', 'App\Http\Controllers\AccountController@updateUser')->name('profile-update');
 
     Route::resource('accounts', 'App\Http\Controllers\AccountController');
+    Route::get('accounts-close/{account}', 'App\Http\Controllers\AccountController@close')->name('accounts.close');
 
     Route::get('deposit', 'App\Http\Controllers\AccountController@getDepositForm')->name('deposit.show');
     Route::post('deposit', 'App\Http\Controllers\AccountController@storeDeposit')->name('deposit.store');

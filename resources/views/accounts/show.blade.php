@@ -4,8 +4,13 @@
 @section('content')
     <br>
     <br>
+    @if($account->is_active)
+        <a href="{{ "/accounts-close/".$account->id }}" class="btn btn-danger" style="float: right">Close Account</a>
 
+    @endif
     <h2>Account Detail</h2>
+
+    <div><b>Account Status</b>: {{$account->is_active ? 'Active' : 'closed'}}</div>
     <div><b>Account number</b>: {{$account->account_number}}</div>
     <div><b>Account Balance</b>: {{$account->balance}}</div>
     <div><b>Account Type</b>: {{$account->account_type}}</div>

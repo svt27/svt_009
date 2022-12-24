@@ -13,7 +13,8 @@ class Account extends Model
         'account_number',
         'account_type',
         'user_id',
-        'balance'
+        'balance',
+        'is_active'
     ];
 
     protected $appends = ['monthly_apy'];
