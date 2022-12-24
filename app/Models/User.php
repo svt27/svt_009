@@ -26,6 +26,7 @@ class User extends Authenticatable
         'public'
     ];
 
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -60,4 +61,5 @@ class User extends Authenticatable
 
         return $sum;
     }
+
 }
