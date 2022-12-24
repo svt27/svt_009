@@ -229,5 +229,20 @@ class AccountController extends Controller
         return view('public-profile', compact('user'));
     }
 
+    public function close(Account $account)
+    {
+        if ($account->balance > 0) {
+            flash()->error("Sorry your balance is {$account->balnace}. You can only close the accounts, which balance is zero");
+            return back();
+        }
+
+
+        $account->is_active = false;
+        $account->save();
+
+        flash()->success('Your account is closed successfully');
+        return back();
+    }
+
 
 }
