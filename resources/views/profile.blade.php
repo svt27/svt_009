@@ -11,7 +11,12 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('profile-update') }}">
                         @csrf
-                        <br>
+                        <div class="form-check">
+                            <input {{ Auth::user()->public ? 'checked' : '' }} class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate">
+                                Public
+                            </label>
+                        </div>                        <br>
                         <br>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
