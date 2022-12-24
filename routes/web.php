@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/public/profile/{user}', 'App\Http\Controllers\AccountController@profile')->name('public.profile');
+
 Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['role:super-admin'])->group(function () {
@@ -32,10 +34,7 @@ Route::middleware(['auth'])->group(function () {
 
     })->name('profile');
 
-    Route::post('profile-update', function () {
-        return view('profile');
-
-    })->name('profile-update');
+    Route::put('profile-update', 'App\Http\Controllers\AccountController@updateUser')->name('profile-update');
 
     Route::resource('accounts', 'App\Http\Controllers\AccountController');
 
