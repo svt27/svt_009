@@ -1,123 +1,137 @@
-<table><tr><td> <em>Assignment: </em> IT202 Milestone 3 Bank Project</td></tr>
+<table><tr><td> <em>Assignment: </em> IT202 Milestone 4 Bank Project</td></tr>
 <tr><td> <em>Student: </em> Shreya Thakkar (svt23)</td></tr>
-<tr><td> <em>Generated: </em> 12/23/2022 4:57:00 AM</td></tr>
-<tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-009-F22/it202-milestone-3-bank-project/grade/svt23" target="_blank">Grading</a></td></tr></table>
-<table><tr><td> <em>Instructions: </em> <ol><li>Checkout Milestone3 branch</li><li>Create a new markdown file called milestone3.md</li><li>git add/commit/push immediate</li><li>Fill in the below deliverables</li><li>At the end copy the markdown and paste it into milestone3.md</li><li>Add/commit/push the changes to Milestone3</li><li>PR Milestone3 to dev and verify</li><li>PR dev to prod and verify</li><li>Checkout dev locally and pull changes to get ready for Milestone 4</li><li>Submit the direct link to this new milestone3.md file from your GitHub prod branch to Canvas</li></ol><p>Note: Ensure all images appear properly on GitHub and everywhere else. Images are only accepted from dev or prod, not localhost. All website links must be from prod (you can assume/infer this by getting your dev URL and changing dev to prod).</p></td></tr></table>
-<table><tr><td> <em>Deliverable 1: </em> User will be able to transfer between their accounts </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
-<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot of transfer page</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209240876-15f665b7-aa87-4f1e-bd4d-8679e55424cc.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p> transfer between their accounts<br></p>
+<tr><td> <em>Generated: </em> 12/24/2022 1:11:17 PM</td></tr>
+<tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-009-F22/it202-milestone-4-bank-project/grade/svt23" target="_blank">Grading</a></td></tr></table>
+<table><tr><td> <em>Instructions: </em> <ol><li>Checkout Milestone4 branch</li><li>Create a new markdown file called milestone4.md</li><li>git add/commit/push immediate</li><li>Fill in the below deliverables</li><li>At the end copy the markdown and paste it into milestone4.md</li><li>Add/commit/push the changes to Milestone4</li><li>PR Milestone4 to dev and verify</li><li>PR dev to prod and verify</li><li>Checkout dev locally and pull changes</li><li>Submit the direct link to this new milestone4.md file from your GitHub prod branch to Canvas</li></ol><p>Note: Ensure all images appear properly on GitHub and everywhere else. Images are only accepted from dev or prod, not localhost. All website links must be from prod (you can assume/infer this by getting your dev URL and changing dev to prod).</p></td></tr></table>
+<table><tr><td> <em>Deliverable 1: </em> User can set their profile to public or private </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
+<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot of new column on the Users table</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209422759-a72cac73-50f6-4de4-990e-5311cdf91aed.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>profile to public or private <br></p>
 </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 2: </em> Add screenshot showing dropdown values</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209240922-23cd9cac-8da3-4b5f-ab47-56583ffd9737.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>showing dropdown values<br></p>
+<tr><td> <em>Sub-Task 2: </em> Add screenshot of updated profile edit view</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209424216-1ef00d66-e7c7-4940-af6f-431861966e6e.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>Heorku screenshot<br></p>
 </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 3: </em> Add screenshot showing user can't transfer more funds than they have</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209241016-d6dc017f-d347-45d3-9bcb-1554430dd37c.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>user can&#39;t transfer more funds<br></p>
+<tr><td> <em>Sub-Task 3: </em> Add screenshot of profile view view (ensure email isn't shown publicly)</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209424250-0dc7a271-b0d3-414d-bd88-252658d960e0.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>public profile view with public<br></p>
+</td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209424382-3da206e0-c052-4d45-9386-cf4725c7a238.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>Private profile view<br></p>
 </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 4: </em> Add screenshot showing user can't transfer to the same account</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209241016-d6dc017f-d347-45d3-9bcb-1554430dd37c.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>user can&#39;t transfer to the same account<br></p>
+<tr><td> <em>Sub-Task 4: </em> Add related pull request(s) links</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/svt27/svt_009/pull/12">https://github.com/svt27/svt_009/pull/12</a> </td></tr>
+<tr><td> <em>Sub-Task 5: </em> Add direct link to a public profile from heroku</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="http://mybankapp-prod.herokuapp.com/public/profile/2">http://mybankapp-prod.herokuapp.com/public/profile/2</a> </td></tr>
+<tr><td> <em>Sub-Task 6: </em> Briefly explain the logic behind how public/private profile works</td></tr>
+<tr><td> <em>Response:</em> <p>add a public column in db. and added a checkbox filed in profile<br>edit, when user check public then email shown on profile public view otherwise<br>not shown. and also create public profile view<br><br></p><br></td></tr>
+</table></td></tr>
+<table><tr><td> <em>Deliverable 2: </em> User will be able to open a savings account </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
+<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot of the create account page for savings with the form filled in</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209425705-1259ac73-ad2b-45ac-bd38-bde0adc09e1d.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>Savings account creation<br></p>
 </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 5: </em> Add screenshot showing you can't transfer an negative balance</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209241016-d6dc017f-d347-45d3-9bcb-1554430dd37c.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>nagative account<br></p>
+<tr><td> <em>Sub-Task 2: </em> Add screenshot of the code that determines the APY</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209425736-83b2c84f-cffa-42fc-b823-798cc261bd65.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>Code for APY<br></p>
 </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 6: </em> Add screenshot of the generated transaction history from the db</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209241203-f0e828c5-f32d-4a21-93ab-715de7e55f5d.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>transaction history from the db<br></p>
+<tr><td> <em>Sub-Task 3: </em> Add screenshots of the related error and success messages when creating a savings account</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209425787-60c26186-6d71-4ea2-9c16-66ea93ea622a.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>bellow 5$ error message<br></p>
 </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 7: </em> Add a screenshot of the Accounts table showing both affected accounts</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209241268-93796ba5-cb8e-4c79-b091-eb1daebeed2b.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>Accounts table showing both affected accounts<br></p>
+<tr><td> <em>Sub-Task 4: </em> Add screenshot(s) of the db showing the new savings account</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209425825-a3075ecc-c14b-4c0e-b331-33107a7cb53f.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>savings accounts db reference<br></p>
 </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 8: </em> Briefly explain the code process/flow of a transfer including how the accounts are fetched for the dropdowns</td></tr>
-<tr><td> <em>Response:</em> <ol><li>First i fetch all logged inn user accounts to show in from account<br>dropdown list then fetch all account list in the system.</li><li>Balance is fetch from<br>account column balanceInsert two records into the Transactions Table</li><li>Account A losing funds to<br>Account B</li><li>Account B gaining funds from Account A</li><li>Ensure each record includes the proper<br>balance_change, expected total, memo, the proper account ids (not account number), and the<br>proper account type</li></ol><div><br></div><div><br></div><br></td></tr>
-<tr><td> <em>Sub-Task 9: </em> Add pull request(s) url</td></tr>
-<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/svt27/svt_009/pull/9">https://github.com/svt27/svt_009/pull/9</a> </td></tr>
-<tr><td> <em>Sub-Task 10: </em> Add link to transfer page from heroku</td></tr>
-<tr><td> <a rel="noreferrer noopener" target="_blank" href="http://mybankapp-prod.herokuapp.com/transfers">http://mybankapp-prod.herokuapp.com/transfers</a> </td></tr>
+<tr><td> <em>Sub-Task 5: </em> Add related pull request(s)</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/svt27/svt_009/pull/16">https://github.com/svt27/svt_009/pull/16</a> </td></tr>
+<tr><td> <em>Sub-Task 6: </em> Add link to the related page on heroku</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="http://mybankapp-prod.herokuapp.com/accounts">http://mybankapp-prod.herokuapp.com/accounts</a> </td></tr>
+<tr><td> <em>Sub-Task 7: </em> Briefly explain the logic behind the APY value</td></tr>
+<tr><td> <em>Response:</em> <p>First saved the apy name and value in system properties coluen then use<br>these properties to calcuate interst<br><br></p><br></td></tr>
 </table></td></tr>
-<table><tr><td> <em>Deliverable 2: </em> Transaction History Page </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
-<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot of transaction history page showing the new transfer transaction</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209241893-35ddbd1b-0e62-4639-b34a-4cb9b734f773.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p> transaction history page showing the new transfer transaction<br></p>
-</td></tr>
+<table><tr><td> <em>Deliverable 3: </em> User will be able to take out a loan </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/f2c037/000000?text=Partial"></td></tr>
+<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot showing the form for opening a loan along with the system generated APY</td></tr>
+<tr><td><table><tr><td>Missing Image</td></tr>
+<tr><td> <em>Caption:</em> (missing)</td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 2: </em> Add screenshots demonstrating the filters and pagination</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209241893-35ddbd1b-0e62-4639-b34a-4cb9b734f773.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>pagination search and page list dropdown<br></p>
-</td></tr>
+<tr><td> <em>Sub-Task 2: </em> Add screenshot showing the user's accounts that can be deposited into</td></tr>
+<tr><td><table><tr><td>Missing Image</td></tr>
+<tr><td> <em>Caption:</em> (missing)</td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 3: </em> Briefly explain how the filters/pagination work</td></tr>
-<tr><td> <em>Response:</em> <p>For pagination i used database pluging<br><br></p><br></td></tr>
-<tr><td> <em>Sub-Task 4: </em> Add pull request(s) url</td></tr>
-<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/svt27/svt_009/pull/9">https://github.com/svt27/svt_009/pull/9</a> </td></tr>
-<tr><td> <em>Sub-Task 5: </em> Add link to Transaction History page from heroku</td></tr>
+<tr><td> <em>Sub-Task 3: </em> Add a screenshot from the db showing the loan account has a negative balance and the generated transaction</td></tr>
+<tr><td><table><tr><td>Missing Image</td></tr>
+<tr><td> <em>Caption:</em> (missing)</td></tr>
+</table></td></tr>
+<tr><td> <em>Sub-Task 4: </em> Add a screenshot from the User's account list page showing the loan displaying as a positive value</td></tr>
+<tr><td><table><tr><td>Missing Image</td></tr>
+<tr><td> <em>Caption:</em> (missing)</td></tr>
+</table></td></tr>
+<tr><td> <em>Sub-Task 5: </em> Add a screenshot showing the code logic for updating the loan's balance per the requirements</td></tr>
+<tr><td><table><tr><td>Missing Image</td></tr>
+<tr><td> <em>Caption:</em> (missing)</td></tr>
+</table></td></tr>
+<tr><td> <em>Sub-Task 6: </em> Add screenshot showing user can't transfer more money from a loan account (alternatively don't show loan accounts in the dropdown for transfer transactions)</td></tr>
+<tr><td><table><tr><td>Missing Image</td></tr>
+<tr><td> <em>Caption:</em> (missing)</td></tr>
+</table></td></tr>
+<tr><td> <em>Sub-Task 7: </em> Add screenshots of any other errors and success</td></tr>
+<tr><td><table><tr><td>Missing Image</td></tr>
+<tr><td> <em>Caption:</em> (missing)</td></tr>
+</table></td></tr>
+<tr><td> <em>Sub-Task 8: </em> Add related pull request(s)</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/svt27/svt_009/pull/20">https://github.com/svt27/svt_009/pull/20</a> </td></tr>
+<tr><td> <em>Sub-Task 9: </em> Add link to create/open loan page</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="http://mybankapp-prod.herokuapp.com/accounts/14">http://mybankapp-prod.herokuapp.com/accounts/14</a> </td></tr>
+<tr><td> <em>Sub-Task 10: </em> Briefly explain the special code implementations for loans</td></tr>
+<tr><td> <em>Response:</em> <p>(missing)</p><br></td></tr>
+</table></td></tr>
+<table><tr><td> <em>Deliverable 4: </em> Listing accounts should show applicable APY or - if none is set for a particular account </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/f2c037/000000?text=Partial"></td></tr>
+<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot of the account list showing a combination of checkings, savings, loans, etc</td></tr>
+<tr><td><table><tr><td>Missing Image</td></tr>
+<tr><td> <em>Caption:</em> (missing)</td></tr>
+</table></td></tr>
+<tr><td> <em>Sub-Task 2: </em> Add related pull request(s)</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/svt27/svt_009/pull/20">https://github.com/svt27/svt_009/pull/20</a> </td></tr>
+<tr><td> <em>Sub-Task 3: </em> Add a link to the Account list page</td></tr>
 <tr><td> <a rel="noreferrer noopener" target="_blank" href="http://mybankapp-prod.herokuapp.com/accounts/14">http://mybankapp-prod.herokuapp.com/accounts/14</a> </td></tr>
 </table></td></tr>
-<table><tr><td> <em>Deliverable 3: </em> User's profile First name and Last name </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
-<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add a screenshot showing the user's profile with the new fields</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209243619-02624747-c1b7-4305-b4ec-b548e4a430ee.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>user&#39;s profile<br></p>
+<table><tr><td> <em>Deliverable 5: </em> User will be able to close an account </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
+<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot showing validation that an account can't be closed if it has a balance (regular account and loan)</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209426875-d3344883-8508-4f00-a636-ae1d87b757ea.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>Can&#39;t close message: Error message on top of Screenshot<br></p>
 </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 2: </em> Add pull request(s) url</td></tr>
-<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/svt27/svt_009/pull/9">https://github.com/svt27/svt_009/pull/9</a> </td></tr>
-<tr><td> <em>Sub-Task 3: </em> Add link to profile page from heroku</td></tr>
-<tr><td> <a rel="noreferrer noopener" target="_blank" href="http://mybankapp-prod.herokuapp.com/profile">http://mybankapp-prod.herokuapp.com/profile</a> </td></tr>
-</table></td></tr>
-<table><tr><td> <em>Deliverable 4: </em> User will be able to transfer funds to another user </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
-<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot of the external transfer page with filled in data</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209243854-d5041978-c250-44fa-9376-adc1da387ad0.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p> external transfer page with filled in data<br></p>
+<tr><td> <em>Sub-Task 2: </em> Add screenshot from the DB showing a closed account as inactive</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209426947-236b91a2-e45d-40f2-a6d6-5807496b0842.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>Success close account<br></p>
+</td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209426986-43673255-b8d0-432f-8e77-21ff1a8398d6.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>Db updated row - highlighted<br></p>
 </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 2: </em> Add screenshot showing user can't send more than they have</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209243942-89e74392-4407-4db0-9868-5c62fe1f275a.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>user can&#39;t send more than they have<br></p>
+<tr><td> <em>Sub-Task 3: </em> Add screenshots of the various account list queries (in the code) showing the changes to use is_active</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209427121-81deebf3-0945-4617-952a-d37805b7b0bb.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p> various account list queries (in the code) showing the changes to use<br>is_active<br></p>
 </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 3: </em> Add screenshot showing they can't send a negative amount</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209243942-89e74392-4407-4db0-9868-5c62fe1f275a.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>same error<br></p>
-</td></tr>
+<tr><td> <em>Sub-Task 4: </em> Add related pull request(s)</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/svt27/svt_009/pull/20">https://github.com/svt27/svt_009/pull/20</a> </td></tr>
+<tr><td> <em>Sub-Task 5: </em> Add a link to the page where a user can close an account</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="http://mybankapp-prod.herokuapp.com/accounts/4">http://mybankapp-prod.herokuapp.com/accounts/4</a> </td></tr>
 </table></td></tr>
-<tr><td> <em>Sub-Task 4: </em> Add screenshot(s) showing message if a user doesn't exist and/or a destination account wasn't found</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209243942-89e74392-4407-4db0-9868-5c62fe1f275a.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p> user doesn&#39;t exist and/or a d<br></p>
-</td></tr>
-</table></td></tr>
-<tr><td> <em>Sub-Task 5: </em> Add screenshot of the transactions table showing the recorded transfer</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209244578-5cda0800-dabe-4913-b89b-918747655c8c.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>ransactions table showing the recorded transfer<br></p>
-</td></tr>
-</table></td></tr>
-<tr><td> <em>Sub-Task 6: </em> Add screenshot(s) showing the updated account balances</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209244712-922a4f50-4cd7-42b2-8d5a-380717cea5d9.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>updated account balances<br></p>
-</td></tr>
-</table></td></tr>
-<tr><td> <em>Sub-Task 7: </em> Briefly explain the process of looking up the target user's account and the validation logic</td></tr>
-<tr><td> <em>Response:</em> <p>Form should include a dropdown of the current user’s accounts (as account_src)<br>Account list<br>should show account number and balance<br>Form should include a field for the destination<br>user’s last name<br>Form should include a field for the last 4 characters of<br>the destination user’s account number (to lookup account_dest)<br><br><br></p><br></td></tr>
-<tr><td> <em>Sub-Task 8: </em> Add pull request(s) url</td></tr>
-<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/svt27/svt_009/pull/9">https://github.com/svt27/svt_009/pull/9</a> </td></tr>
-<tr><td> <em>Sub-Task 9: </em> Add link to external transfer page from heroku</td></tr>
-<tr><td> <a rel="noreferrer noopener" target="_blank" href="http://mybankapp-prod.herokuapp.com/transfers">http://mybankapp-prod.herokuapp.com/transfers</a> </td></tr>
-</table></td></tr>
-<table><tr><td> <em>Deliverable 5: </em> Misc </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
-<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshots showing which issues are done/closed (project board) Incomplete Issues should not be closed (Milestone3 issues)</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/33340243/209243854-d5041978-c250-44fa-9376-adc1da387ad0.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>issues<br></p>
+<table><tr><td> <em>Deliverable 6: </em> Misc </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="http://via.placeholder.com/400x120/009955/fff?text=Complete"></td></tr>
+<tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshots showing which issues are done/closed (project board) Incomplete Issues should not be closed (Milestone4 issues)</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/89936955/209425898-27d2df58-c59b-4925-ba9a-84c6e2b157b9.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>issues closed in github<br></p>
 </td></tr>
 </table></td></tr>
 </table></td></tr>
-<table><tr><td><em>Grading Link: </em><a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-009-F22/it202-milestone-3-bank-project/grade/svt23" target="_blank">Grading</a></td></tr></table>
+<table><tr><td><em>Grading Link: </em><a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-009-F22/it202-milestone-4-bank-project/grade/svt23" target="_blank">Grading</a></td></tr></table>

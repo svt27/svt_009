@@ -18,7 +18,9 @@ class AccountController extends Controller
      */
     public function index()
     {
-        $accounts = auth()->user()->accounts;
+        // UCID SVT23
+        // Name Shreya
+        $accounts = Account::where('user_id', auth()->user()->id, 'is_active', '1')->get();
         return view('accounts.list', compact('accounts'));
     }
 
