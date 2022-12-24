@@ -45,7 +45,7 @@ class AccountController extends Controller
         $fields = $request->all();
 
         $fields['account_number'] = bin2hex(random_bytes(5));
-        $fields['account_type'] = 'personal';
+//        $fields['account_type'] = 'personal';
         $fields['user_id'] = auth()->id();
 
         $account = Account::create($fields);

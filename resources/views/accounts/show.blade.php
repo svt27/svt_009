@@ -10,6 +10,8 @@
     <div><b>Account Balance</b>: {{$account->balance}}</div>
     <div><b>Account Type</b>: {{$account->account_type}}</div>
     <div><b>Opened </b>: {{$account->created_at}}</div>
+    <div><b>Calculated Api </b>: {{$account->monthly_apy}}</div>
+
 
     <br>
     <br>
