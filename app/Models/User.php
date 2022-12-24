@@ -23,6 +23,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'public'
     ];
 
     /**
@@ -47,5 +48,16 @@ class User extends Authenticatable
     public function accounts()
     {
         return $this->hasMany(Account::class);
+    }
+
+    public function net()
+    {
+        $sum = 0;
+        $accounts = $this->accounts;
+
+        foreach ($accounts as $account)
+            $sum = $sum + $account->balance;
+
+        return $sum;
     }
 }

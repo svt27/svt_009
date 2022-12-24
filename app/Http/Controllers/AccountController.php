@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Account;
 use App\Models\Transaction;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Psy\Util\Str;
 use function GuzzleHttp\Promise\all;
@@ -204,6 +205,28 @@ class AccountController extends Controller
         flash()->success('Transfer done successfully');
 
         return redirect()->route('accounts.index');
+    }
+
+    public function updateUser(Request $request)
+    {
+        $fields = $request->only(['public', 'name', 'email']);
+        if (!isset($fields['public']))
+            $fields['public'] = false;
+        else
+            $fields['public'] = true;
+
+
+        $user = auth()->user();
+        $user->update($fields);
+
+
+        flash()->success('profile updated');
+        return back();
+    }
+
+    public function profile(User $user)
+    {
+        return view('public-profile', compact('user'));
     }
 
 

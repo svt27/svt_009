@@ -11,7 +11,16 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('profile-update') }}">
                         @csrf
-                        <br>
+                        @method('PUT')
+                        <div class="div" style="margin-bottom: 30px">
+                        <a target="__blank" href="{{ route('public.profile', Auth::user()->id) }}">Public Profile Link</a>
+                        </div>
+                        <div class="form-check">
+                            <input {{ Auth::user()->public ? 'checked' : '' }} class="form-check-input" name="public" type="checkbox" value="{{ Auth::user()->public }}" id="flexCheckIndeterminate">
+                            <label class="form-check-label" for="flexCheckIndeterminate">
+                                Public
+                            </label>
+                        </div>                        <br>
                         <br>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -48,7 +57,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -64,7 +73,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
                             </div>
                         </div>
                         <br>
